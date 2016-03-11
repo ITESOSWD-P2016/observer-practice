@@ -1,9 +1,14 @@
-package com.iteso.observer.impl;
+package com.iteso.observer.Observers.impl;
+
+import com.iteso.observer.Observers.IObserver;
+import com.iteso.observer.Subjects.impl.SWDP2016;
+
+import java.util.Random;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Alejandra {
+public class Sebastian implements IObserver {
     private SWDP2016 swdp2016;
     private String lastMessage;
     private String lastQuestion;
@@ -12,10 +17,18 @@ public class Alejandra {
         return lastMessage;
     }
 
-    public void tellMeSomething(String something) {
-        this.lastMessage = something;
-        String complain = "will you give more checkpoints for that?";
-        getSwdp2016().askQuestionToTeacher(complain);
+    public void setWhateverMessageIWantWhenIWant(String lastMessage) {
+        try {
+            Thread.sleep(new Random().nextInt(10000));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if (new Random().nextBoolean()) {
+            this.lastMessage = lastMessage;
+        }
+        else {
+            this.lastMessage = "My idea is better";
+        }
     }
 
     public String getLastQuestion() {

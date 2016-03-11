@@ -1,9 +1,12 @@
-package com.iteso.observer.impl;
+package com.iteso.observer.Observers.impl;
+
+import com.iteso.observer.Observers.IObserver;
+import com.iteso.observer.Subjects.impl.SWDP2016;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Sabino {
+public class Sabino implements IObserver {
     private SWDP2016 swdp2016;
     private String lastMessage;
     private String lastQuestion;
