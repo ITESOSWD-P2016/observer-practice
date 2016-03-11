@@ -1,9 +1,9 @@
-package com.iteso.observer;
+package com.iteso.observer.impl;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Cristhian {
+public class Ariana {
     private SWDP2016 swdp2016;
     private String lastMessage;
     private String lastQuestion;

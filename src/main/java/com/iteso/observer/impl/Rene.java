@@ -1,9 +1,9 @@
-package com.iteso.observer;
+package com.iteso.observer.impl;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Flavio {
+public class Rene {
     private SWDP2016 swdp2016;
     private String lastMessage;
     private String lastQuestion;
@@ -13,7 +13,7 @@ public class Flavio {
     }
 
     public void setLastMessage(String lastMessage) {
-        this.lastMessage = lastMessage;
+        this.lastMessage = "something different";
     }
 
     public String getLastQuestion() {

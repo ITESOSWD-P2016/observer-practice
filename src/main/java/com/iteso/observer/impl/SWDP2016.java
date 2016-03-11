@@ -1,4 +1,6 @@
-package com.iteso.observer;
+package com.iteso.observer.impl;
+
+import com.iteso.observer.impl.*;
 
 /**
  * Created by rvillalobos on 3/10/16.

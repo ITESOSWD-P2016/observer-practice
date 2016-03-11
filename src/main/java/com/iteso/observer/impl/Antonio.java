@@ -1,9 +1,11 @@
-package com.iteso.observer;
+package com.iteso.observer.impl;
+
+import java.util.Random;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Luis {
+public class Antonio {
     private SWDP2016 swdp2016;
     private String lastMessage;
     private String lastQuestion;
@@ -12,8 +14,12 @@ public class Luis {
         return lastMessage;
     }
 
-    public void setLastMessage(String lastMessage) {
-        this.lastMessage = lastMessage;
+    public void maybeIllListen(String words) {
+
+        Random random = new Random();
+        if (random.nextBoolean()) {
+            this.lastMessage = words;
+        }
     }
 
     public String getLastQuestion() {
