@@ -11,29 +11,6 @@ public class SWDP2016 implements Subject{
     public SWDP2016() {
         observers = new ArrayList();
     }
-
-    public void sendMessageToStudents(String message) {
-        alejandra.tellMeSomething(message);
-        alexa.tryToGetMyAttention(message);
-        antonio.maybeIllListen(message);
-        ariana.setLastMessage(message);
-        cristhian.setLastMessage(message);
-        flavio.setLastMessage(message);
-        jorge.setLastMessage(message);
-        josue.tryToSendMeMessage(message);
-        luis.setLastMessage(message);
-        rene.setLastMessage(message);
-        sabino.setLastMessage(message);
-        saul.setLastMessage(message);
-        sebastian.setWhateverMessageIWantWhenIWant(message);
-
-    }
-    */
-    public void askQuestionToTeacher(String question){
-        rodrigo.setLastQuestion(question);
-
-    }
-
     public void registerObserver(Observer observer) {
         observers.add(observer);
     }
