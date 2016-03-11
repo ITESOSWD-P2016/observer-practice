@@ -1,10 +1,16 @@
-package com.iteso.observer;
+package com.iteso.observer.subject.impl;
+
+import com.iteso.observer.observers.Observer;
+import com.iteso.observer.observers.impl.*;
+import com.iteso.observer.subject.Subject;
+
+import java.util.ArrayList;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class SWDP2016 {
-    Alejandra alejandra;
+public class SWDP2016 implements Subject{
+    /*Alejandra alejandra;
     Alexa alexa;
     Antonio antonio;
     Ariana ariana;
@@ -20,6 +26,9 @@ public class SWDP2016 {
     Rodrigo rodrigo;
 
     public SWDP2016(){
+
+
+
         alejandra = new Alejandra();
         alexa = new Alexa();
         antonio = new Antonio();
@@ -54,5 +63,27 @@ public class SWDP2016 {
     public void askQuestionToTeacher(String question){
         rodrigo.setLastQuestion(question);
 
+    }*/
+
+    ArrayList observers = null;
+
+    public SWDP2016(){
+        observers = new ArrayList();
     }
+
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    public void notifyObservers(String message) {
+        for (Object observer1 : observers) {
+            Observer observer = (Observer) observer1;
+            observer.setMessage(message);
+        }
+    }
+
 }
