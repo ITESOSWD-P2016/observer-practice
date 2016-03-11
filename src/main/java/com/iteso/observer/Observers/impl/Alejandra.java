@@ -47,7 +47,5 @@ public class Alejandra implements IObserver {
         this.lastMessage = message;
     }
 
-    public void askQuestionToTeacher(String question) {
-        this.lastQuestion = question;
-    }
+
 }

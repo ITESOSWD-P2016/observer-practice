@@ -44,7 +44,5 @@ public class Rodrigo implements IObserver {
         this.lastMessage = message;
     }
 
-    public void askQuestionToTeacher(String question) {
-        this.lastQuestion = question;
-    }
+
 }

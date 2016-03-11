@@ -5,6 +5,6 @@ package com.iteso.observer.Observers;
  */
 public interface IObserver {
     void sendMessageToStudents(String message);
-    void askQuestionToTeacher(String question);
+
 
 }
