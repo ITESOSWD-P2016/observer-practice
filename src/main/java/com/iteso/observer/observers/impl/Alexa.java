@@ -1,9 +1,11 @@
-package com.iteso.observer;
+package com.iteso.observer.observers.impl;
+
+import com.iteso.observer.subjects.impl.SWDP2016;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Ariana {
+public class Alexa {
     private SWDP2016 swdp2016;
     private String lastMessage;
     private String lastQuestion;
@@ -12,8 +14,13 @@ public class Ariana {
         return lastMessage;
     }
 
-    public void setLastMessage(String lastMessage) {
-        this.lastMessage = lastMessage;
+    public void tryToGetMyAttention(String words) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        this.lastMessage = words;
     }
 
     public String getLastQuestion() {
