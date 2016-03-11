@@ -9,6 +9,7 @@ public class Flavio {
     private String lastQuestion;
 
     public String getLastMessage() {
+
         return lastMessage;
     }
 
