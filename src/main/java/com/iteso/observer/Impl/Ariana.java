@@ -1,9 +1,11 @@
-package com.iteso.observer;
+package com.iteso.observer.Impl;
+
+import com.iteso.subject.Impl.SWDP2016;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Saul {
+public class Ariana {
     private SWDP2016 swdp2016;
     private String lastMessage;
     private String lastQuestion;

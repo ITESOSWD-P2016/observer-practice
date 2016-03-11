@@ -1,4 +1,6 @@
-package com.iteso.observer;
+package com.iteso.observer.Impl;
+
+import com.iteso.subject.Impl.SWDP2016;
 
 /**
  * Created by rvillalobos on 3/10/16.

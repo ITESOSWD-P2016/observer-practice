@@ -1,11 +1,11 @@
-package com.iteso.observer;
+package com.iteso.observer.Impl;
 
-import java.util.Random;
+import com.iteso.subject.Impl.SWDP2016;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Josue {
+public class Alexa {
     private SWDP2016 swdp2016;
     private String lastMessage;
     private String lastQuestion;
@@ -14,13 +14,13 @@ public class Josue {
         return lastMessage;
     }
 
-    public void tryToSendMeMessage(String lastMessage) {
-        Random random = new Random();
-        if (random.nextBoolean()) {
-            this.lastMessage = lastMessage;
+    public void tryToGetMyAttention(String words) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        else
-            this.lastMessage = "whatever";
+        this.lastMessage = words;
     }
 
     public String getLastQuestion() {
@@ -42,5 +42,4 @@ public class Josue {
     public void askSomething(String myQuestion){
         setLastQuestion(myQuestion);
         getSwdp2016().askQuestionToTeacher(getLastQuestion());    }
-
 }
