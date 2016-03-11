@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.iteso</groupId>
-  <artifactId>observer-practice</artifactId>
+  <artifactId>iObserver-practice</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>observer-practice</name>
+  <name>iObserver-practice</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -22,7 +22,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>observer-practice</finalName>
+    <finalName>iObserver-practice</finalName>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -39,7 +39,7 @@
             <packageBranchRate>85</packageBranchRate>
             <regexes>
               <regex>
-                <pattern>com.iteso.observer.*</pattern>
+                <pattern>com.iteso.iObserver.*</pattern>
                 <branchRate>90</branchRate>
                 <lineRate>80</lineRate>
               </regex>

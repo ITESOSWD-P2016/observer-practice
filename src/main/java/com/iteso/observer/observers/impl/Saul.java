@@ -1,10 +1,14 @@
-package com.iteso.observer;
+package com.iteso.observer.observers.impl;
+
+import com.iteso.observer.subjects.iSubject;
+import com.iteso.observer.observers.iObserver;
+
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Cristhian {
-    private SWDP2016 swdp2016;
+public class Saul implements iObserver{
+    private iSubject swdp2016;
     private String lastMessage;
     private String lastQuestion;
 
@@ -24,15 +28,16 @@ public class Cristhian {
         this.lastQuestion = lastQuestion;
     }
 
-    public SWDP2016 getSwdp2016() {
+    public iSubject getSwdp2016() {
         return swdp2016;
     }
 
-    public void setSwdp2016(SWDP2016 swdp2016) {
+    public void setSwdp2016(iSubject swdp2016) {
         this.swdp2016 = swdp2016;
     }
 
     public void askSomething(String myQuestion){
         setLastQuestion(myQuestion);
-        getSwdp2016().askQuestionToTeacher(getLastQuestion());    }
+        getSwdp2016().(getLastQuestion());
+    }
 }
