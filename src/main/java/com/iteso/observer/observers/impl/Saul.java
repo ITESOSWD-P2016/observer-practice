@@ -1,9 +1,11 @@
-package com.iteso.observer;
+package com.iteso.observer.observers.impl;
+
+import com.iteso.observer.subject.impl.SWDP2016;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Jorge {
+public class Saul {
     private SWDP2016 swdp2016;
     private String lastMessage;
     private String lastQuestion;
@@ -13,7 +15,7 @@ public class Jorge {
     }
 
     public void setLastMessage(String lastMessage) {
-        this.lastMessage = "my idea is better";
+        this.lastMessage = lastMessage;
     }
 
     public String getLastQuestion() {
