@@ -1,4 +1,6 @@
-package com.iteso.observer;
+package com.iteso.observer.Observer.impl;
+
+import com.iteso.observer.Subject.impl.SWDP2016;
 
 import java.util.Random;
 
@@ -39,8 +41,6 @@ public class Josue {
         this.swdp2016 = swdp2016;
     }
 
-    public void askSomething(String myQuestion){
-        setLastQuestion(myQuestion);
-        getSwdp2016().askQuestionToTeacher(getLastQuestion());    }
+
 
 }
