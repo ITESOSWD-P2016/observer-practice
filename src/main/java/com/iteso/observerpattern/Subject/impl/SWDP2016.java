@@ -1,8 +1,7 @@
-package com.iteso.observer.Subject.impl;
+package com.iteso.observerpattern.Subject.impl;
 
-import com.iteso.observer.Observer.iObserver;
-import com.iteso.observer.Observer.impl.*;
-import com.iteso.observer.Subject.iSubject;
+import com.iteso.observerpattern.Observer.iObserver;
+import com.iteso.observerpattern.Subject.iSubject;
 
 import java.util.ArrayList;
 
@@ -34,13 +33,17 @@ public class SWDP2016 implements iSubject {
     public void notifyObservers() {
         for (Object theObserver : observers) {
             iObserver observer = (iObserver) theObserver;
-            observer.sendMessage(this.message);
+            observer.updateChat(this.message);
         }
     }
 
     public void setMessage( String msg){
         this.message = msg;
         notifyObservers();
+    }
+
+    public void sendMessage( String msg){
+        this.setMessage(msg);
     }
 
 
