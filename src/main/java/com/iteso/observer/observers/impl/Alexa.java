@@ -23,8 +23,8 @@ public class Alexa implements iObserver {
     }
 
 	public void sendMessage(String sMessage) {
-		setLastMessage(sMessage);
-		SWDP2016.notifyObservers(sMessage);
+		this.setLastMessage(sMessage);
+		SWDP2016.notifyObservers(this, sMessage);
 		
 	}
 }

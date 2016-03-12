@@ -19,7 +19,7 @@ public class Rodrigo implements iObserver {
     
 	public void sendMessage(String sMessage) {
 		this.setLastMessage(lastMessage);
-		SWDP2016.notifyObservers(sMessage);
+		SWDP2016.notifyObservers(this, sMessage);
 	}
 	
 }

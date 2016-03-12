@@ -15,13 +15,13 @@ public class Alejandra implements iObserver {
     
 	public void sendMessage(String sMessage) {
 		this.setLastMessage(lastMessage);
-		SWDP2016.notifyObservers(sMessage);
+		SWDP2016.notifyObservers(this, sMessage);
 	}
 
     public void setLastMessage(String something) {
         this.lastMessage = something;
         String complain = "will you give more checkpoints for that?";
-        SWDP2016.notifyObservers(complain);
+        SWDP2016.notifyObservers(this, complain);
     }
     
 }

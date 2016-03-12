@@ -14,11 +14,11 @@ public class Sabino implements iObserver {
 
     public void setLastMessage(String lastMessage) {
         this.lastMessage = "ignore message ask again";
-        SWDP2016.notifyObservers("can you repeat?");
+        SWDP2016.notifyObservers(this, "can you repeat?");
     }
 
     public void sendMessage(String myQuestion){
-        setLastMessage(myQuestion);
-        SWDP2016.notifyObservers(myQuestion);
+        this.setLastMessage(myQuestion);
+        SWDP2016.notifyObservers(this, myQuestion);
     }
 }

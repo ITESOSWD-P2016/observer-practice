@@ -24,8 +24,8 @@ public class Josue implements iObserver {
     }
 
     public void sendMessage(String myQuestion){
-        setLastMessage(myQuestion);
-        SWDP2016.notifyObservers(myQuestion);
+        this.setLastMessage(myQuestion);
+        SWDP2016.notifyObservers(this, myQuestion);
     }
 
 }

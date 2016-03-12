@@ -17,7 +17,7 @@ public class Sebastian implements iObserver {
 
 	public void sendMessage(String sMessage) {
 		this.setLastMessage(lastMessage);
-		SWDP2016.notifyObservers(sMessage);
+		SWDP2016.notifyObservers(this, sMessage);
 	}
 	
 	public void setLastMessage(String sMessage) {

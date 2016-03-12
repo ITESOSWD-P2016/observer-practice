@@ -16,8 +16,9 @@ public class SWDP2016 implements iSubject {
 		return listObservers.remove(oObserver);
 	}
 	
-	public static void notifyObservers(String sMessage) {
+	public static void notifyObservers(iObserver oObserver, String sMessage) {
 		for (iObserver o : listObservers)
-			o.setLastMessage(sMessage);
+			if (!o.equals(oObserver))
+				o.setLastMessage(sMessage);
 	}
 }
