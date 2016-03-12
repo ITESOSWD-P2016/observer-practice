@@ -1,9 +1,9 @@
-package com.iteso.observer;
+package com.iteso.observers.Observers.impl;
 
-/**
- * Created by rvillalobos on 3/10/16.
- */
-public class Rodrigo {
+import com.iteso.observers.Observers.iObserver;
+import com.iteso.observers.Subject.impl.*;
+
+public class Jorge {
     private SWDP2016 swdp2016;
     private String lastMessage;
     private String lastQuestion;
@@ -13,7 +13,7 @@ public class Rodrigo {
     }
 
     public void setLastMessage(String lastMessage) {
-        this.lastMessage = lastMessage;
+        this.lastMessage = "my idea is better";
     }
 
     public String getLastQuestion() {
@@ -34,6 +34,6 @@ public class Rodrigo {
 
     public void askSomething(String myQuestion){
         setLastQuestion(myQuestion);
-        getSwdp2016().sendMessageToStudents(getLastQuestion());
+        //  getSwdp2016().askQuestionToTeacher(getLastQuestion());
     }
 }
