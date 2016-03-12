@@ -1,36 +1,27 @@
-package com.iteso.observerpattern.Observer.impl;
+package com.iteso.observerpattern.ObserverTests.impl;
 
-import com.iteso.observerpattern.Observer.iObserver;
+import com.iteso.observerpattern.ObserverTests.iObserver;
 import com.iteso.observerpattern.Subject.iSubject;
-
-
-import java.util.Random;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Antonio implements iObserver {
+public class Cristhian implements iObserver {
     private String name;
     private iSubject slackgroup;
     private String lastMessage;
     private String lastQuestion;
 
-    public Antonio(iSubject chatSWDP2016, String aName){
+    public Cristhian(){
+        this.name = "Criss";
+    }
+
+    public Cristhian(iSubject chatSWDP2016, String aName){
         iSubject newslackgroup = chatSWDP2016;
         this.name = aName;
         setSlackGroup(newslackgroup);
-        newslackgroup.registerObserver(this);
+        newslackgroup.registerObserver(this,this.name);
     }
-
-
-    public void maybeIllListen(String words) {
-
-        Random random = new Random();
-        if (random.nextBoolean()) {
-            this.lastMessage = words;
-        }
-    }
-
 
 
     public void sendMessageToChat(String message) {
@@ -84,6 +75,5 @@ public class Antonio implements iObserver {
     public void setLastQuestion(String lastQuestion) {
         this.lastQuestion = lastQuestion;
     }
-
 
 }

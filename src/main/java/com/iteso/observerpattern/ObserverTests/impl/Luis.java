@@ -1,29 +1,26 @@
-package com.iteso.observerpattern.Observer.impl;
+package com.iteso.observerpattern.ObserverTests.impl;
 
-import com.iteso.observerpattern.Observer.iObserver;
 import com.iteso.observerpattern.Subject.iSubject;
-
+import com.iteso.observerpattern.ObserverTests.iObserver;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Alejandra implements iObserver {
+public class Luis implements iObserver{
     private String name;
     private iSubject slackgroup;
     private String lastMessage;
     private String lastQuestion;
 
-    public Alejandra(iSubject chatSWDP2016, String aName){
+    public Luis(){
+        this.name = "Luis";
+    }
+
+    public Luis(iSubject chatSWDP2016, String aName){
         iSubject newslackgroup = chatSWDP2016;
         this.name = aName;
         setSlackGroup(newslackgroup);
-        newslackgroup.registerObserver(this);
-    }
-
-    public void tellMeSomething(String something) {
-        this.lastMessage = something;
-        String complain = "will you give more checkpoints for that?";
-        this.sendMessageToChat(complain);
+        newslackgroup.registerObserver(this,this.name);
     }
 
 
@@ -76,5 +73,6 @@ public class Alejandra implements iObserver {
     public void setLastQuestion(String lastQuestion) {
         this.lastQuestion = lastQuestion;
     }
+
 
 }

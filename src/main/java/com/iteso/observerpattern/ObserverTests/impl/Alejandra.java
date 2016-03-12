@@ -1,33 +1,33 @@
-package com.iteso.observerpattern.Observer.impl;
+package com.iteso.observerpattern.ObserverTests.impl;
 
-import com.iteso.observerpattern.Observer.iObserver;
+import com.iteso.observerpattern.ObserverTests.iObserver;
 import com.iteso.observerpattern.Subject.iSubject;
 
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Alexa implements iObserver {
+public class Alejandra implements iObserver {
     private String name;
     private iSubject slackgroup;
     private String lastMessage;
     private String lastQuestion;
 
-    public Alexa(iSubject chatSWDP2016, String aName){
+    public Alejandra(){
+        this.name = "Alejandra";
+    }
+
+    public Alejandra(iSubject chatSWDP2016, String aName){
         iSubject newslackgroup = chatSWDP2016;
         this.name = aName;
         setSlackGroup(newslackgroup);
-        newslackgroup.registerObserver(this);
+        newslackgroup.registerObserver(this,this.name);
     }
 
-
-    public void tryToGetMyAttention(String words) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        this.lastMessage = words;
+    public void tellMeSomething(String something) {
+        this.lastMessage = something;
+        String complain = "will you give more checkpoints for that?";
+        this.sendMessageToChat(complain);
     }
 
 
@@ -52,8 +52,6 @@ public class Alexa implements iObserver {
         this.setLastQuestion(question);
         this.sendMessageToChat(lastQuestion);
     }
-
-
 
 
 
@@ -83,12 +81,4 @@ public class Alexa implements iObserver {
         this.lastQuestion = lastQuestion;
     }
 
-
 }
-
-
-
-
-
-
-

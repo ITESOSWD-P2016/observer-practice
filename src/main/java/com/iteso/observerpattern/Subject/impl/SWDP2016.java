@@ -1,6 +1,6 @@
 package com.iteso.observerpattern.Subject.impl;
 
-import com.iteso.observerpattern.Observer.iObserver;
+import com.iteso.observerpattern.ObserverTests.iObserver;
 import com.iteso.observerpattern.Subject.iSubject;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ public class SWDP2016 implements iSubject {
     }
 
 
-    public void registerObserver(iObserver observer) {
+    public void registerObserver(iObserver observer, String name) {
         observers.add(observer);
     }
 
@@ -37,15 +37,22 @@ public class SWDP2016 implements iSubject {
         }
     }
 
-    public void setMessage( String msg){
-        this.message = msg;
+    public void sendMessage(String msg){
+        setMessage(msg);
         notifyObservers();
     }
 
-    public void sendMessage( String msg){
-        this.setMessage(msg);
+    public void setMessage(String msg){
+        this.message= msg;
     }
 
+    public String getMessage(){
+        return this.message;
+    }
+
+    public ArrayList getObservers() {
+        return observers;
+    }
 
     /*
 

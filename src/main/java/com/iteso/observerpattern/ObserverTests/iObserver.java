@@ -1,4 +1,4 @@
-package com.iteso.observerpattern.Observer;
+package com.iteso.observerpattern.ObserverTests;
 
 /**
  * Created by lnvitado on 11/03/2016.

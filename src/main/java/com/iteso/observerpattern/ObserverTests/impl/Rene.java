@@ -1,28 +1,29 @@
-package com.iteso.observerpattern.Observer.impl;
+package com.iteso.observerpattern.ObserverTests.impl;
 
-import com.iteso.observerpattern.Observer.iObserver;
+import com.iteso.observerpattern.ObserverTests.iObserver;
 import com.iteso.observerpattern.Subject.iSubject;
 
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Sabino implements iObserver {
+public class Rene implements iObserver {
     private String name;
     private iSubject slackgroup;
     private String lastMessage;
     private String lastQuestion;
 
-    public Sabino(iSubject chatSWDP2016, String aName){
+    public Rene(){
+        this.name = "Rene";
+    }
+
+    public Rene(iSubject chatSWDP2016, String aName){
         iSubject newslackgroup = chatSWDP2016;
         this.name = aName;
         setSlackGroup(newslackgroup);
-        newslackgroup.registerObserver(this);
+        newslackgroup.registerObserver(this,this.name);
     }
 
-    public void setLastMessage(String lastMessage) {
-        this.lastMessage = "ignore message ask again";
-    }
 
     public void sendMessageToChat(String message) {
         slackgroup = this.getSlackGroup();
@@ -42,7 +43,7 @@ public class Sabino implements iObserver {
     }
 
     public void sendQuestion(String question){
-        this.setLastQuestion("Can you repeat again?");
+        this.setLastQuestion(question);
         this.sendMessageToChat(lastQuestion);
     }
 
@@ -64,6 +65,9 @@ public class Sabino implements iObserver {
         return lastMessage;
     }
 
+    public void setLastMessage(String lastMessage) {
+        this.lastMessage = lastMessage;
+    }
 
     public String getLastQuestion() {
         return lastQuestion;
@@ -75,7 +79,4 @@ public class Sabino implements iObserver {
 
 
 }
-
-
-
 

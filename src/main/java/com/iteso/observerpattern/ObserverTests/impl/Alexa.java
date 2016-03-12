@@ -1,40 +1,37 @@
-package com.iteso.observerpattern.Observer.impl;
+package com.iteso.observerpattern.ObserverTests.impl;
 
-import com.iteso.observerpattern.Observer.iObserver;
+import com.iteso.observerpattern.ObserverTests.iObserver;
 import com.iteso.observerpattern.Subject.iSubject;
 
-
-import java.util.Random;
 
 /**
  * Created by rvillalobos on 3/10/16.
  */
-public class Sebastian implements iObserver {
+public class Alexa implements iObserver {
     private String name;
     private iSubject slackgroup;
     private String lastMessage;
     private String lastQuestion;
 
-    public Sebastian(iSubject chatSWDP2016, String aName){
+    public Alexa(){
+        this.name = "Alexa";
+    }
+
+    public Alexa(iSubject chatSWDP2016, String aName){
         iSubject newslackgroup = chatSWDP2016;
         this.name = aName;
         setSlackGroup(newslackgroup);
-        newslackgroup.registerObserver(this);
+        newslackgroup.registerObserver(this,this.name);
     }
 
 
-    public void setWhateverMessageIWantWhenIWant(String lastMessage) {
+    public void tryToGetMyAttention(String words) {
         try {
-            Thread.sleep(new Random().nextInt(10000));
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        if (new Random().nextBoolean()) {
-            this.lastMessage = lastMessage;
-        }
-        else {
-            this.lastMessage = "My idea is better";
-        }
+        this.lastMessage = words;
     }
 
 
@@ -92,3 +89,10 @@ public class Sebastian implements iObserver {
 
 
 }
+
+
+
+
+
+
+

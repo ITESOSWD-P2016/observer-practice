@@ -1,8 +1,8 @@
 package com.iteso.observerpattern;
 
-import com.iteso.observerpattern.Observer.impl.Alejandra;
-import com.iteso.observerpattern.Observer.impl.Cristhian;
-import com.iteso.observerpattern.Observer.impl.Luis;
+import com.iteso.observerpattern.ObserverTests.impl.Alejandra;
+import com.iteso.observerpattern.ObserverTests.impl.Cristhian;
+import com.iteso.observerpattern.ObserverTests.impl.Luis;
 import com.iteso.observerpattern.Subject.impl.SWDP2016;
 
 /**

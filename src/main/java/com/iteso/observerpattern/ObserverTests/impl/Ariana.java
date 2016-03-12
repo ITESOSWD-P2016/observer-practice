@@ -1,6 +1,6 @@
-package com.iteso.observerpattern.Observer.impl;
+package com.iteso.observerpattern.ObserverTests.impl;
 
-import com.iteso.observerpattern.Observer.iObserver;
+import com.iteso.observerpattern.ObserverTests.iObserver;
 import com.iteso.observerpattern.Subject.iSubject;
 
 
@@ -13,11 +13,15 @@ public class Ariana implements iObserver {
     private String lastMessage;
     private String lastQuestion;
 
+    public Ariana(){
+        this.name = "Ariana";
+    }
+
     public Ariana(iSubject chatSWDP2016, String aName){
         iSubject newslackgroup = chatSWDP2016;
         this.name = aName;
         setSlackGroup(newslackgroup);
-        newslackgroup.registerObserver(this);
+        newslackgroup.registerObserver(this,this.name);
     }
 
 
